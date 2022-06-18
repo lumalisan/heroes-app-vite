@@ -16,7 +16,7 @@ const HeroScreen = () => {
       navigate(-1);
   }
 
-  const heroImageUrl = `/src/assets/${ heroId }.jpg`;
+  const heroImageUrl = `/assets/${ heroId }.jpg`;
 
   return (
     <div className='row mt-5'>
