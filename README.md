@@ -24,8 +24,8 @@ Here you can find the demo link:
 - [Netlify](https://www.netlify.com)
 
 ## 📸 Screenshots
-![Screenshot 1](https://cdn.jsdelivr.net/gh/lumalisan/assets-cdn/heroes-app-vite/screen1.jpg)
+![Screenshot 1](https://cdn.jsdelivr.net/gh/lumalisan/assets-cdn@b3976032b79ce405992b356b0091d570864d170a/heroes-app-vite/screen1.jpg)
 
-![Screenshot 2](https://cdn.jsdelivr.net/gh/lumalisan/assets-cdn/heroes-app-vite/screen2.jpg)
+![Screenshot 2](https://cdn.jsdelivr.net/gh/lumalisan/assets-cdn@b3976032b79ce405992b356b0091d570864d170a/heroes-app-vite/screen2.jpg)
 
-![Screenshot 3](https://cdn.jsdelivr.net/gh/lumalisan/assets-cdn/heroes-app-vite/screen3.jpg)
+![Screenshot 3](https://cdn.jsdelivr.net/gh/lumalisan/assets-cdn@b3976032b79ce405992b356b0091d570864d170a/heroes-app-vite/screen3.jpg)
