@@ -29,9 +29,9 @@ const SearchScreen = () => {
             <h1>Search Hero</h1>
             <hr />
 
-            <div className='row'>
+            <div className='row row-cols-1 row-cols-lg-2'>
 
-                <div className='col-5'>
+                <div className='col col-lg-5 mb-5'>
                     <h4>Search</h4>
                     <hr />
 
@@ -46,13 +46,13 @@ const SearchScreen = () => {
                             value={searchText}
                         />
 
-                        <button type='submit' className='btn btn-outline-primary mt-1 btn-block'>
+                        <button type='submit' className='btn btn-primary mt-2 w-100'>
                             Search
                         </button>
                     </form>
                 </div>
 
-                <div className='col-7'>
+                <div className='col col-lg-7'>
                     <h4>Results</h4>
                     <hr />
 

@@ -19,11 +19,11 @@ const HeroScreen = () => {
   const heroImageUrl = `/assets/${ heroId }.jpg`;
 
   return (
-    <div className='row mt-5'>
-      <div className='col-4'>
+    <div className='row row-cols-1 row-cols-lg-2 mb-5'>
+      <div className='col col-lg-4 mb-4'>
         <img src={heroImageUrl} alt={hero.superhero} className='img-thumbnail animate__animated animate__fadeInLeft' />
       </div>
-      <div className='col-8 animate__animated animate__fadeIn'>
+      <div className='col col-lg-8 animate__animated animate__fadeIn'>
         <h3>{hero.superhero}</h3>
         <ul className='list-group list-group-flush'>
           <li className='list-group-item'><b>Alter ego:</b> {hero.alter_ego}</li>

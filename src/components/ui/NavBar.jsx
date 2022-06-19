@@ -5,55 +5,59 @@ export const Navbar = () => {
     const { user, logout } = useAuth0();
 
     return (
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="p-3 bg-dark text-white mb-5">
+            <div className='container'>
+                <div className='d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start'>
 
-            <Link
-                className="navbar-brand mx-4"
-                to="/"
-            >
-                Heroes App Vite
-            </Link>
-
-            <div className="navbar-collapse">
-                <div className="navbar-nav">
-
-                    <NavLink
-                        className="nav-item nav-link"
-                        to="/marvel"
+                    <Link
+                        className="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none navbar-brand"
+                        to="/"
                     >
-                        Marvel
-                    </NavLink>
+                        Heroes App
+                    </Link>
 
-                    <NavLink
-                        className="nav-item nav-link"
-                        to="/dc"
-                    >
-                        DC
-                    </NavLink>
+                    <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li>
+                            <NavLink
+                                className={({ isActive }) => `nav-link px-2 ${isActive ? 'text-info' : 'text-white'}`}
+                                to="/marvel"
+                            >
+                                Marvel
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive }) => `nav-link px-2 ${isActive ? 'text-info' : 'text-white'}`}
+                                to="/dc"
+                            >
+                                DC
+                            </NavLink>
+                        </li>
+                        <li>
+                            <NavLink
+                                className={({ isActive }) => `nav-link px-2 ${isActive ? 'text-info' : 'text-white'}`}
+                                to="/search"
+                            >
+                                Search
+                            </NavLink>
+                        </li>
+                    </ul>
 
-                    <NavLink
-                        className="nav-item nav-link"
-                        to="/search"
-                    >
-                        Search
-                    </NavLink>
+                    <div className="text-end">
+                        <span className='text-warning me-4'>
+                            {user.name}
+                        </span>
+
+                        <button
+                            type='button'
+                            className="btn btn-outline-light"
+                            onClick={() => logout({ returnTo: window.location.origin })}
+                        >
+                            Logout
+                        </button>
+                    </div>
+
                 </div>
-            </div>
-
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                <ul className="navbar-nav ml-auto">
-
-                    <span className='nav-item nav-link text-info'>
-                        {user.name}
-                    </span>
-
-                    <button
-                        className="nav-item nav-link btn"
-                        onClick={() => logout({ returnTo: window.location.origin })}
-                    >
-                        Logout
-                    </button>
-                </ul>
             </div>
         </nav>
     )
