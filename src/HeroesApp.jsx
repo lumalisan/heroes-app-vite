@@ -1,27 +1,16 @@
-import React, { useEffect, useReducer } from 'react'
-import { AuthContext } from './auth/authContext'
-import { authReducer } from './auth/authReducer'
+import React from 'react'
+import { Auth0Provider } from "@auth0/auth0-react"
 import AppRouter from './routers/AppRouter'
 
-const init = () => {
-    return JSON.parse(localStorage.getItem('user')) || { isLoggedIn: false }
-}
-
 const HeroesApp = () => {
-    const [user, dispatch] = useReducer(authReducer, {}, init);
-
-    useEffect(() => {
-        if ( !user ) return;
-        localStorage.setItem('user', JSON.stringify(user));
-    }, [user])
-
     return (
-        <AuthContext.Provider value={{
-            user,
-            dispatch
-        }}>
+        <Auth0Provider
+            domain="dev-9bky2y6f.us.auth0.com"
+            clientId="pYycSypCAN6oljQCOvxiYnVk3VzC1llt"
+            redirectUri={window.location.origin}
+        >
             <AppRouter />
-        </AuthContext.Provider>
+        </Auth0Provider>
     )
 }
 

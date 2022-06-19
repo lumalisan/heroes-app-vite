@@ -1,34 +1,17 @@
-import { useContext } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../auth/authContext';
-
-import { types } from "../../types/types"
+import { Link, NavLink } from 'react-router-dom';
+import { useAuth0 } from '@auth0/auth0-react';
 
 export const Navbar = () => {
-
-    const context = useContext(AuthContext);
-    const navigate = useNavigate();
-
-    const handleLogOut = () => {
-        const action = {
-            type: types.logout
-        }
-
-        context.dispatch(action);
-
-        navigate('/login', {
-            replace: true
-        })
-    }
+    const { user, logout } = useAuth0();
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
 
             <Link
-                className="navbar-brand"
+                className="navbar-brand mx-4"
                 to="/"
             >
-                Asociaciones
+                Heroes App Vite
             </Link>
 
             <div className="navbar-collapse">
@@ -61,12 +44,12 @@ export const Navbar = () => {
                 <ul className="navbar-nav ml-auto">
 
                     <span className='nav-item nav-link text-info'>
-                        {context.user.name}
+                        {user.name}
                     </span>
 
                     <button
                         className="nav-item nav-link btn"
-                        onClick={handleLogOut}
+                        onClick={() => logout({ returnTo: window.location.origin })}
                     >
                         Logout
                     </button>

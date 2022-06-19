@@ -1,11 +1,13 @@
-import { useContext } from "react"
 import { Navigate } from "react-router-dom";
-import { AuthContext } from "../auth/authContext";
+import { useAuth0 } from '@auth0/auth0-react';
+import Loading from "../components/ui/Loading";
 
 const PublicRoute = ({ children }) => {
-    const context = useContext(AuthContext);
+    const { isAuthenticated, isLoading } = useAuth0();
 
-    return !context.user.isLoggedIn ? children : <Navigate to='/' />;
+    if (isLoading) return <Loading />
+
+    return !isAuthenticated ? children : <Navigate to='/' />;
 }
 
 export default PublicRoute

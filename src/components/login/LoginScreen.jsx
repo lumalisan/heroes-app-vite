@@ -1,28 +1,8 @@
-import React, { useContext } from 'react'
-import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../auth/authContext';
-
-import { types } from "../../types/types"
+import React from 'react'
+import { useAuth0 } from '@auth0/auth0-react';
 
 const LoginScreen = () => {
-
-    const context = useContext(AuthContext);
-    const navigate = useNavigate();
-
-    const handleLogin = () => {
-        const action = {
-            type: types.login,
-            payload: { name: 'Juan' }
-        }
-
-        context.dispatch(action);
-
-        const lastPath = localStorage.getItem('lastPath') || '/';
-
-        navigate(lastPath, {
-            replace: true
-        });
-    }
+    const { loginWithRedirect } = useAuth0();
 
     return (
         <div className='container mt-5'>
@@ -31,7 +11,7 @@ const LoginScreen = () => {
 
             <button
                 className='btn btn-primary'
-                onClick={handleLogin}
+                onClick={loginWithRedirect}
             >
                 Login
             </button>
