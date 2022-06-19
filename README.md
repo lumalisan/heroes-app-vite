@@ -1,7 +1,7 @@
 # Heroes App · [![Netlify Status](https://api.netlify.com/api/v1/badges/d46d491a-a13c-4af8-95eb-91ac51d2c7b5/deploy-status)](https://app.netlify.com/sites/heroes-app-vite/deploys)
 
 ## 🎯 About
-This is a small application using the SPA concept to familiarise myself with React 18 concepts.
+This is a small application using the SPA concept to familiarise myself with React 18.
 
 ## ▶️ Demo
 
