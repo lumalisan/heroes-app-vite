@@ -7,7 +7,7 @@ This is a small application using the SPA concept to familiarise myself with Rea
 
 Here you can find the demo link:
 
-- [Demo](https://heroes-app-vite.netlify.app/login)
+- [Demo](https://heroes-app-vite.netlify.app)
 
 ## :rocket: Technologies used
 
