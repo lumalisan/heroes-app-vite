@@ -1,7 +1,11 @@
 # Heroes App
 
 ## 🎯 About
-This is a small application using the SPA concept to familiarise myself with React 18.
+Welcome to the Heroes App!
+
+The Heroes App is an application that allows you to explore and learn about your favorite heroes and characters. Whether you're a comic book enthusiast or a fan of cinematic heroes, this app provides a platform to discover details about various characters, their superpowers, and more.
+
+This small application was developed with the purpose of learning a little more about how react, vite, and other technologies work.
 
 ## ▶️ Demo
 
@@ -13,6 +17,13 @@ Here you can find the demo link:
 
 > Email: thonyelarquitecto@gmail.com<br/>
 > Password: Test1234!<br/>
+
+## 🤖 Features
+- Use of Auth0 for user auth.
+- Use of animations for a better user experience.
+- Heroes separated pages by publisher.
+- More information page for each hero.
+- Use of a global search engine to find heroes from any publisher.
 
 ## :rocket: Technologies used
 
